@@ -1,0 +1,17 @@
+{
+  "name": "data-aggregator",
+  "input": [
+    {
+      "name": "confidential",
+      "data_type": "Table",
+      "data_format": "csv"
+    }
+  ],
+  "output": [
+    {
+      "name": "aggregated",
+      "data_type": "Table",
+      "data_format": "csv"
+    }
+  ]
+}

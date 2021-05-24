@@ -42,3 +42,7 @@ def function(working_directory):
         except Exception as e:
             trace = ''.join(traceback.format_exception(None, e, e.__traceback__))
             status.write(trace)
+
+
+if __name__ == '__main__':
+    function(sys.argv[1])

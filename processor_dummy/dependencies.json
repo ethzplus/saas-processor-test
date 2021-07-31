@@ -1,8 +1,10 @@
 {
-  "name": "dummy",
   "install_scripts": [
-    "dependencies/install_dummy_a.sh",
-    "dependencies/install_dummy_b.sh"
+    "install_script_a.sh",
+    "install_script_b.sh"
   ],
-  "requirements_file": "dependencies/requirements.txt"
+  "python": {
+    "requirements": "requirements.txt"  
+  }
+  
 }

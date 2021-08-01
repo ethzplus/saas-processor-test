@@ -3,7 +3,7 @@ import logging
 import os
 import sys
 
-logger = logging.getLogger('testing.dummy_adapter')
+logger = logging.getLogger('test-proc')
 
 
 def function(working_directory):

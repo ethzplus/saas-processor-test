@@ -18,5 +18,9 @@
       "data_type": "JSONObject",
       "data_format": "json"
     }
+  ],
+  "configurations": [
+    "default", 
+    "nscc"
   ]
 }

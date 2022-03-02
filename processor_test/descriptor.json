@@ -6,13 +6,13 @@
       "data_type": "JSONObject",
       "data_format": "json",
       "schema": {
-        "type": "object",
-        "properties": {
-          "v": {"type": "number"}
-        },
-        "required": ["v"]
+        "type": "string",
+        "name": "string",
+        "features": "object"
       }
-    },
+    }
+  ],
+  "output": [
     {
       "name": "b",
       "data_type": "JSONObject",
@@ -20,28 +20,13 @@
       "schema": {
         "type": "object",
         "properties": {
-          "v": {"type": "number"}
+          "count": {"type": "number"}
         },
-        "required": ["v"]
-      }
-    }
-  ],
-  "output": [
-    {
-      "name": "c",
-      "data_type": "JSONObject",
-      "data_format": "json",
-      "schema": {
-        "type": "object",
-        "properties": {
-          "v": {"type": "number"}
-        },
-        "required": ["v"]
+        "required": ["count"]
       }
     }
   ],
   "configurations": [
-    "default", 
-    "nscc"
+    "default"
   ]
 }

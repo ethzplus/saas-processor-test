@@ -8,7 +8,7 @@
       "schema": {
         "type": "string",
         "name": "string",
-        "features": "object"
+        "features": "array"
       }
     }
   ],

@@ -6,9 +6,12 @@
       "data_type": "JSONObject",
       "data_format": "json",
       "schema": {
-        "type": "string",
-        "name": "string",
-        "features": "array"
+        "type": "object",
+        "properties": {
+          "name": "string",
+          "type": "string",
+          "features": "array"
+        },
       }
     }
   ],

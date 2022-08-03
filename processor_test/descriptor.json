@@ -4,14 +4,14 @@
     {
       "name": "a",
       "data_type": "GeoTIFF",
-      "data_format": "tif",
+      "data_format": "tif"
     }
   ],
   "output": [
     {
       "name": "b",
       "data_type": "text",
-      "data_format": "txt",
+      "data_format": "txt"
     }
   ],
   "configurations": [

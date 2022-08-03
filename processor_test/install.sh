@@ -27,6 +27,12 @@ elif [ "$1" == "nscc" ]; then
 
 	exit 0
 
+elif [ "$1" == "R" ]; then
+	echo "Install R dependencies"
+	Rscript ./install_dep.R
+
+	exit 0
+
 else
 	exit 1
 fi

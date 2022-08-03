@@ -19,6 +19,11 @@ elif [ "$1" == "nscc" ]; then
 	echo "Run processor.py on $2"
 	python3 processor.py $2
 
+elif [ "$1" == "R" ]; then
+
+	echo "Run processor.r on $2"
+	Rscript processor.r $2
+
 else
 	exit 1
 fi

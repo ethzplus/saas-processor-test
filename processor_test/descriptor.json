@@ -3,30 +3,15 @@
   "input": [
     {
       "name": "a",
-      "data_type": "JSONObject",
-      "data_format": "json",
-      "schema": {
-        "type": "object",
-        "properties": {
-          "name": {"type": "string"},
-          "type": {"type": "string"},
-          "features": {"type": "array"}
-        }
-      }
+      "data_type": "GeoTIFF",
+      "data_format": "tif",
     }
   ],
   "output": [
     {
       "name": "b",
-      "data_type": "JSONObject",
-      "data_format": "json",
-      "schema": {
-        "type": "object",
-        "properties": {
-          "count": {"type": "number"}
-        },
-        "required": ["count"]
-      }
+      "data_type": "text",
+      "data_format": "txt",
     }
   ],
   "configurations": [

@@ -1,0 +1,30 @@
+{
+  "name": "runoff",
+  "input": [
+    {
+      "name": "input_map",
+      "data_type": "GeoTIFF",
+      "data_format": "tif"
+  },
+  {
+      "name": "general_lookup_table",
+      "data_type": "CSV",
+      "data_format": "csv"
+  },
+  {
+      "name": "zh_slope_percent",
+      "data_type": "GeoTIFF",
+      "data_format": "tif"
+  }
+  ],
+  "output": [
+    {
+      "name": "output_map",
+      "data_type": "GeoTIFF",
+      "data_format": "tif"
+    }
+  ],
+  "configurations": [
+    "default"
+  ]
+}

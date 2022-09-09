@@ -7,7 +7,7 @@
       "data_format": "tif"
   },
   {
-      "name": "meir et al 2000 vertical",
+      "name": "meir_et_al_2000_vertical",
       "data_type": "CSV",
       "data_format": "csv"
   },

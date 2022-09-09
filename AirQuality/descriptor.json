@@ -1,0 +1,35 @@
+{
+  "name": "runoff",
+  "input": [
+    {
+      "name": "input_map",
+      "data_type": "GeoTIFF",
+      "data_format": "tif"
+  },
+  {
+      "name": "meir et al 2000 vertical",
+      "data_type": "CSV",
+      "data_format": "csv"
+  },
+  {
+      "name": "lai_zh_10m",
+      "data_type": "GeoTIFF",
+      "data_format": "tif"
+  },
+  {
+      "name": "vegheight_zh_10m",
+      "data_type": "GeoTIFF",
+      "data_format": "tif"
+  }
+  ],
+  "output": [
+    {
+      "name": "output_map",
+      "data_type": "GeoTIFF",
+      "data_format": "tif"
+    }
+  ],
+  "configurations": [
+    "default"
+  ]
+}

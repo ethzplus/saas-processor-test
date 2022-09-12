@@ -12,5 +12,5 @@ library(rgeos, lib="~/R_libs/")
 
 sink()
 
-noquote("trigger:output:output_map")
+noquote("trigger:output:report")
 noquote("trigger:progress:100")

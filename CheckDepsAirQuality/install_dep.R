@@ -1,0 +1,6 @@
+install.packages("rgdal", repos="http://cran.r-project.org", lib="~/R_libs/")
+install.packages("raster", repos="http://cran.r-project.org", lib="~/R_libs/")
+install.packages("sp", repos="http://cran.r-project.org", lib="~/R_libs/")
+install.packages("igraph", repos="http://cran.r-project.org", lib="~/R_libs/")
+install.packages("gdistance", repos="http://cran.r-project.org", lib="~/R_libs/")
+install.packages("rgeos", repos="http://cran.r-project.org", lib="~/R_libs/")

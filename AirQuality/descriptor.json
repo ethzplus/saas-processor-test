@@ -24,7 +24,7 @@
   ],
   "output": [
     {
-      "name": "output_map",
+      "name": "output_map.tif",
       "data_type": "GeoTIFF",
       "data_format": "tif"
     }

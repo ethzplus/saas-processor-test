@@ -26,7 +26,10 @@ selectedGeotiffPath <- file.path(args[1],"input_map")
 laiPath <- file.path(args[1],"lai_zh_10m")
 vegheightPath <- file.path(args[1],"vegheight_zh_10m")
 meirPath <- file.path(args[1], "meir_et_al_2000_vertical")
-outputPath <- file.path(args[1],"output_map")
+
+# It is important to add the .tif. Oterwiese it creates output_map.grd and output_map.gri
+outputPath <- file.path(args[1],"output_map.tif")
+
 #---------------------------------------------------------------
 #---------------------------------------------------------------
 
@@ -99,13 +102,13 @@ gf <- as.character(gf)
 #       col=c("green4", "black","blue","red"), cex=0.8, bty = "n")
 
 #dev.off()
-noquote("trigger:progress:25")
+noquote("trigger:progress:10")
 # if there is no vegheight data from angela, assume 30 m
 vegheight[is.na(vegheight)] <- 30
 # also assume a max tree height of 60m - cut off anything taller than that
 vegheight[vegheight > 60] <- 60
 
-
+noquote("trigger:progress:20")
 # ok so fill vegheight with the right data
 underint <- vegheight
 underint[,]<- 0
@@ -128,7 +131,7 @@ underint[underint >0.5] <- 0.5
 underint <- (lai/ (1-underint))*underint
 # remove non-forest again
 underint[lcm10 != 35 & lcm10 != 38] <- 0
-
+noquote("trigger:progress:30")
 # ok clean up lai so that it does not include urban or water
 lai[is.na(lcm10)]<-NA
 lai[lcm10 == 1|lcm10 == 2|lcm10 == 3|lcm10 == 4|lcm10 == 5|lcm10 == 6|lcm10 == 7|lcm10 == 8|lcm10 == 9|lcm10 == 10|
@@ -145,7 +148,7 @@ lai[lcm10 == 40]<- 0
 #lai[lcm10 == 25 & lai < 2] <- 2
 #lai[lcm10 == 26 & lai < 2] <- 2
 #lai[lcm10 == 27 & lai < 2] <- 2
-
+noquote("trigger:progress:40")
 lai <- projectRaster(lai,lcm10)
 
 lai[lcm10 == 22 & lai < 2] <- 2
@@ -238,7 +241,7 @@ totalPM10_DAY75 <- 84 * 1e-6 * 557 *  (sum(!is.na(getValues(lcm10 )))*10*9.93)
 
 #---------------------------------------------------------------
 #---------------------------------------------------------------
-
+noquote("trigger:progress:90")
 # save output map
 # save it out
 writeRaster(qDAY75, outputPath, overwrite=T)

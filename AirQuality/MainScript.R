@@ -28,7 +28,9 @@ vegheightPath <- file.path(args[1],"vegheight_zh_10m")
 meirPath <- file.path(args[1], "meir_et_al_2000_vertical")
 
 # It is important to add the .tif. Oterwiese it creates output_map.grd and output_map.gri
-outputPath <- file.path(args[1],"output_map.tif")
+output_name <- "output_map.tif"
+
+outputPath <- file.path(args[1], output_name)
 
 #---------------------------------------------------------------
 #---------------------------------------------------------------
@@ -250,5 +252,5 @@ writeRaster(qDAY75, outputPath, overwrite=T)
 #writeRaster(gm2,
 #            paste(savefolder, "/pm10-gm2.tif", sep=""), overwrite=T)
 
-noquote("trigger:output:output_map")
+noquote(paste("trigger:output:", output_name, sep = ""))
 noquote("trigger:progress:100")

@@ -19,7 +19,7 @@
   ],
   "output": [
     {
-      "name": "output_map",
+      "name": "runoff.tif",
       "data_type": "GeoTIFF",
       "data_format": "tif"
     }

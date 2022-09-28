@@ -21,6 +21,7 @@ noquote("trigger:progress:0")
 library(raster, lib="~/R_libs/")
 library(rgdal, lib="~/R_libs/")
 library(sp, lib="~/R_libs/")
+library(igraph, lib="~/R_libs/")
 library(gdistance, lib="~/R_libs/")
 library(rgeos, lib="~/R_libs/")
 rasterOptions(tolerance = 0.4)
@@ -32,6 +33,9 @@ args <- commandArgs(trailingOnly = TRUE)
 selectedGeotiffPath <- file.path(args[1],"input_map")
 lookupTablePath <- file.path(args[1],"general_lookup_table")
 slopeZhPath <- file.path(args[1],"zh_slope_percent")
+
+# outputs
+runoff_10m_output_name <- "runoff.tif"
 #---------------------------------------------------------------
 #---------------------------------------------------------------
 
@@ -104,9 +108,10 @@ runoff_10m <- aggregate(runoff,fact=10)
 
 # save it out
 #writeRaster(runoff_10m, paste(savefolder,"/runoff.tif", sep=""), overwrite=T)
-writeRaster(runoff_10m, file.path(args[1],"output_map"), overwrite=T)
+#writeRaster(runoff_10m, file.path(args[1],"output_map"), overwrite=T)
 #writeRaster(runoff_perc, paste(savefolder, "/runoff_perc.tif", sep=""), overwrite=T)
 
+writeRaster(runoff_10m, runoff_10m_output_name, overwrite=T)
+noquote(paste("trigger:output:", runoff_10m_output_name, sep=""))
 
-noquote("trigger:output:output_map")
 noquote("trigger:progress:100")

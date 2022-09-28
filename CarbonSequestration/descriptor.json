@@ -42,7 +42,7 @@
       "name": "valuescc.txt",
       "data_type": "Text",
       "data_format": "txt"
-    },
+    }
   ],
   "configurations": [
     "default"

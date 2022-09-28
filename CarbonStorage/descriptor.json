@@ -1,0 +1,25 @@
+{
+  "name": "carbonStorage",
+  "input": [
+    {
+      "name": "input_map",
+      "data_type": "GeoTIFF",
+      "data_format": "tif"
+  },
+  {
+      "name": "general_lookup_table",
+      "data_type": "CSV",
+      "data_format": "csv"
+  }
+  ],
+  "output": [
+    {
+      "name": "carbon-storage.tif",
+      "data_type": "GeoTIFF",
+      "data_format": "tif"
+    }
+  ],
+  "configurations": [
+    "default"
+  ]
+}

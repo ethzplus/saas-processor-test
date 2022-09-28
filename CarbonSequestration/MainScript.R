@@ -47,6 +47,13 @@ carbonSequestrationCSS_output_name <- "carbon-sequestration-CSS.tif"
 valueswissets_output_name <- "valueswissets.txt"
 valuescc_output_name <- "valuescc.txt"
 
+carbonSequestration_output_path <- file.path(args[1], carbonSequestration_output_name)
+carbonSequestrationSwissets_output_path <- file.path(args[1], carbonSequestrationSwissets_output_name)
+carbonSequestrationCSS_output_path <- file.path(args[1], carbonSequestrationCSS_output_name)
+valueswissets_output_path <- file.path(args[1], valueswissets_output_name)
+valuescc_output_path <- file.path(args[1], valuescc_output_name)
+
+
 # sharedPath <- args[1]
 # print(sharedPath)
 
@@ -168,19 +175,19 @@ valuescc <- round(valuescc)
 
 noquote("trigger:progress:80")
 
-writeRaster(cseq, carbonSequestration_output_name, overwrite=T)
+writeRaster(cseq, carbonSequestration_output_path, overwrite=T)
 noquote(paste("trigger:output:", carbonSequestration_output_name, sep=""))
 
-writeRaster(cstoreswissets, carbonSequestrationSwissets_output_name, overwrite=T)
+writeRaster(cstoreswissets, carbonSequestrationSwissets_output_path, overwrite=T)
 noquote(paste("trigger:output:", carbonSequestrationSwissets_output_name, sep=""))
 
-writeRaster(cstorescc, carbonSequestrationCSS_output_name, overwrite=T)
+writeRaster(cstorescc, carbonSequestrationCSS_output_path, overwrite=T)
 noquote(paste("trigger:output:", carbonSequestrationCSS_output_name, sep=""))
 
-write(valueswissets, valueswissets_output_name)
+write(valueswissets, valueswissets_output_path)
 noquote(paste("trigger:output:", valueswissets_output_name, sep=""))
 
-write(valuescc, valuescc_output_name)
+write(valuescc, valuescc_output_path)
 noquote(paste("trigger:output:", valuescc_output_name, sep=""))
 
 noquote("trigger:progress:100")

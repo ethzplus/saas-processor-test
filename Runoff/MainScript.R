@@ -36,6 +36,7 @@ slopeZhPath <- file.path(args[1],"zh_slope_percent")
 
 # outputs
 runoff_10m_output_name <- "runoff.tif"
+runoff_10m_output_path <- file.path(args[1], runoff_10m_output_name)
 #---------------------------------------------------------------
 #---------------------------------------------------------------
 
@@ -111,7 +112,7 @@ runoff_10m <- aggregate(runoff,fact=10)
 #writeRaster(runoff_10m, file.path(args[1],"output_map"), overwrite=T)
 #writeRaster(runoff_perc, paste(savefolder, "/runoff_perc.tif", sep=""), overwrite=T)
 
-writeRaster(runoff_10m, runoff_10m_output_name, overwrite=T)
+writeRaster(runoff_10m, runoff_10m_output_path, overwrite=T)
 noquote(paste("trigger:output:", runoff_10m_output_name, sep=""))
 
 noquote("trigger:progress:100")

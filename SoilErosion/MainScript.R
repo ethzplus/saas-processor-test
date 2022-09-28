@@ -29,7 +29,7 @@ ndvi_zh_10mPath <- file.path(args[1],"ndvi_zh_10m")
 
 # outputs
 soilLoss_output_name <- "soil_loss.tif"
-
+soilLoss_output_path <- file.path(args[1], soilLoss_output_name)
 
 # sharedPath <- args[1]
 # print(sharedPath)
@@ -260,7 +260,7 @@ A <- A * ((res(ES)[1] * res(ES)[2])/10000)
 #            paste(savefolder, "/soil-loss.tif", sep=""), overwrite=T)
 #writeRaster(ES/SI,
 #            paste(savefolder, "/soil-protection-veg-percent.tif", sep=""), overwrite=T)
-writeRaster(ES, soilLoss_output_name, overwrite=T)
+writeRaster(ES, soilLoss_output_path, overwrite=T)
 noquote(paste("trigger:output:", soilLoss_output_name, sep=""))
 
 noquote("trigger:progress:100")

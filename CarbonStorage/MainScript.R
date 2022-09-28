@@ -32,7 +32,7 @@ lookupTablePath <- file.path(args[1],"general_lookup_table")
 
 # outputs
 carbonStorage_output_name <- "carbon-storage.tif"
-
+carbonStorage_output_path <- file.path(args[1], carbonStorage_output_name)
 
 # sharedPath <- args[1]
 # print(sharedPath)
@@ -111,7 +111,7 @@ cstore <- (cstore / 10000) * 100
 #writeRaster(cstore, 
 #            paste(savefolder, "/carbon-storage.tif", sep=""), overwrite=T)
 
-writeRaster(cseq, carbonStorage_output_name, overwrite=T)
+writeRaster(cseq, carbonStorage_output_path, overwrite=T)
 noquote(paste("trigger:output:", carbonStorage_output_name, sep=""))
 
 noquote("trigger:progress:100")

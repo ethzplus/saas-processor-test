@@ -1,0 +1,50 @@
+{
+  "name": "air-temperature",
+  "input": [
+    {
+      "name": "input_map",
+      "data_type": "GeoTIFF",
+      "data_format": "tif"
+  },
+  {
+      "name": "lai_zh_10m",
+      "data_type": "GeoTIFF",
+      "data_format": "tif"
+  },
+  {
+      "name": "park10_2",
+      "data_type": "GeoTIFF",
+      "data_format": "tif"
+  },
+  {
+      "name": "demand_new11",
+      "data_type": "GeoTIFF",
+      "data_format": "tif"
+  },
+  {
+      "name": "normmargwil",
+      "data_type": "GeoTIFF",
+      "data_format": "tif"
+  }
+  ],
+  "output": [
+    {
+      "name": "air-temperature.tif",
+      "data_type": "GeoTIFF",
+      "data_format": "tif"
+    },
+    {
+      "name": "marwildiff.tif",
+      "data_type": "GeoTIFF",
+      "data_format": "tif"
+    },
+    {
+      "name": "value",
+      "data_type": "Text",
+      "data_format": "txt"
+    }
+  ],
+  "configurations": [
+    "default"
+  ]
+}

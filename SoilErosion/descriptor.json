@@ -1,0 +1,45 @@
+{
+  "name": "SoilErosion",
+  "input": [
+    {
+      "name": "input_map",
+      "data_type": "GeoTIFF",
+      "data_format": "tif"
+  },
+  {
+      "name": "general_lookup_table",
+      "data_type": "CSV",
+      "data_format": "csv"
+  },
+  {
+      "name": "dhm_zh_10m",
+      "data_type": "GeoTIFF",
+      "data_format": "tif"
+  },
+  {
+      "name": "flowacc_zh_10m",
+      "data_type": "GeoTIFF",
+      "data_format": "tif"
+  },
+  {
+      "name": "slope_deg_zh_10m",
+      "data_type": "GeoTIFF",
+      "data_format": "tif"
+  },
+  {
+      "name": "ndvi_zh_10m",
+      "data_type": "GeoTIFF",
+      "data_format": "tif"
+  }
+  ],
+  "output": [
+    {
+      "name": "soil-loss.tif",
+      "data_type": "GeoTIFF",
+      "data_format": "tif"
+    }
+  ],
+  "configurations": [
+    "default"
+  ]
+}

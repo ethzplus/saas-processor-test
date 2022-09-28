@@ -34,7 +34,7 @@
   ],
   "output": [
     {
-      "name": "soil-loss.tif",
+      "name": "soil_loss.tif",
       "data_type": "GeoTIFF",
       "data_format": "tif"
     }

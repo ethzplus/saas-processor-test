@@ -28,7 +28,7 @@ slope_deg_zh_10mPath <- file.path(args[1],"slope_deg_zh_10m")
 ndvi_zh_10mPath <- file.path(args[1],"ndvi_zh_10m") 
 
 # outputs
-soilLoss_output_name <- "soil-loss.tif"
+soilLoss_output_name <- "soil_loss.tif"
 
 
 # sharedPath <- args[1]

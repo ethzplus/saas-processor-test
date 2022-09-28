@@ -1,0 +1,50 @@
+{
+  "name": "CarbonSequestration",
+  "input": [
+    {
+      "name": "input_map",
+      "data_type": "GeoTIFF",
+      "data_format": "tif"
+  },
+  {
+      "name": "general_lookup_table",
+      "data_type": "CSV",
+      "data_format": "csv"
+  },
+  {
+      "name": "cseqstand",
+      "data_type": "GeoTIFF",
+      "data_format": "tif"
+  }
+  ],
+  "output": [
+    {
+      "name": "carbon-sequestration.tif",
+      "data_type": "GeoTIFF",
+      "data_format": "tif"
+    },
+    {
+      "name": "carbon-sequestration-swissets.tif",
+      "data_type": "GeoTIFF",
+      "data_format": "tif"
+    },
+    {
+      "name": "carbon-sequestration-CSS.tif",
+      "data_type": "GeoTIFF",
+      "data_format": "tif"
+    },
+    {
+      "name": "valueswissets.txt",
+      "data_type": "Text",
+      "data_format": "txt"
+    },
+    {
+      "name": "valuescc.txt",
+      "data_type": "Text",
+      "data_format": "txt"
+    },
+  ],
+  "configurations": [
+    "default"
+  ]
+}

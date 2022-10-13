@@ -28,7 +28,7 @@ vegheightPath <- file.path(args[1],"vegheight_zh_10m")
 meirPath <- file.path(args[1], "meir_et_al_2000_vertical")
 
 # It is important to add the .tif. Otherwise it creates output_map.grd and output_map.gri
-output_name <- "output_map.tif"
+output_name <- "air-quality.tif"
 
 outputPath <- file.path(args[1], output_name)
 
